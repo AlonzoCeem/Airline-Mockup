@@ -1,11 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { HashRouter} from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
+import Footer from './components/Footer';
+import Nav from './components/Nav';
+import Home from './components/Home';
 
 const App = ()=> {
   return (
     <>
-      <h1 className='text-green-600'>Hello World!!</h1>
+      <Nav/>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+      </Routes>
+      <Footer/>
     </>
   );
 };
